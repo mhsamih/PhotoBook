@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PhotoBook</title>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.min.css">
+		<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+	</head>
+	<body>
+
+
+		<!-- Preloader -->
+		<style type="text/css">
+			.preloader{
+				width: 100%;
+		    position: fixed;
+		    z-index: 9;
+		    transition: 3s;
+		    height: 100%;
+		    overflow: hidden;
+		    background-color: rgba(255, 255, 255, 0.899);
+			}
+			.preloader .loader{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%);
+			}
+			.preloader .loader {
+			  width: 150px;
+			  height: 150px; }
+			.preloader .ball-1, .preloader .ball-2 {
+			  position: absolute;
+			  top: 25%;
+			  left: 25%;
+			  width: 50%;
+			  height: 50%;
+			  background-color: #ffd200;
+			  border-radius: 50%;
+			  animation: preloader 2s ease-in-out infinite;
+			  opacity: .5; }
+			.preloader .ball-2 {
+			  animation-delay: -1s; }
+
+			@keyframes preloader {
+			  0%, 100% {
+			    transform: scale(0); }
+			  50% {
+			    transform: scale(1); } }
+					}
+		</style>
+
+		<!-- Preloader Html -->
+		<div class="preloader">
+			<div class="loader">
+				<div class="ball-1"></div>
+				<div class="ball-2"></div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			var preloader = document.querySelector('.preloader'),
+					body = document.querySelector('body');
+
+			window.onload = function(){
+				preloader.style.opacity = 0;
+				preloader.style.height = 0;
+			}
+
+		</script>
+		<!-- /Preloader -->
+
+
+
+
+		<!-- SideNav -->
+		<nav class="sidenav" id="sidenav">
+			<span class="fa fa-chevron-left"></span>
+			<a class="navbar-brand" href="#">
+	 			<img alt="Brand" src="img/logo-white.png">
+			</a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Step</a></li>
+				<li><a href="#">Advantages</a></li>
+				<li><a href="#">Ready solution</a></li>
+				<li><a href="#">Terms Payment Shipping</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+			<div class="font-awesome">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+			</div>
+				<a class="designer-logo" href="#">
+		 			<img alt="Brand" src="img/designer-logo.png">
+				</a>
+		</nav>
+		<!-- /SideNav -->
+
+
+		<!-- Main -->
+		<main id="main">
+			<div class="container">
+				<nav class="navbar">
+					<div class="float-left">
+					<div class="sidenav-icon" onclick="sidenav_icon(this); openNav()">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					</div>
+
+					<script>
+						var sideNav = document.getElementById("sidenav"),
+								main =  document.getElementById("main");
+						// Fucntion For Animate Sidenav Icon
+						function sidenav_icon(x) {
+						  x.classList.toggle("change");
+						}
+
+						// Function For Open Side Nav 
+						function openNav() {
+					    sideNav.classList.toggle('left_0');
+					    main.classList.toggle('left_255');
+						}
+						// main.onclick = function(){
+						// 	sideNav.classList.remove('width');
+						// 	this.classList.remove('margin-left');
+						// }
+					</script>
+
+					<a class="navbar-brand" href="#">
+						<img alt="Brand" src="img/logo.png">
+					</a>
+				</div>
+
+				<div class="phone float-right">
+					<span><i class="fa fa-phone"></i>+11 235 813 2134</span>
+					<i class="fa fa-long-arrow-right"></i>
+				</div>
+				</nav>
+			</div><!-- Container -->
+
+			<div class="main-banner">
+				<div class="container">
+					<h1>Create your own photostory</h1>
+					<span>Make your photobook online</span><br>
+					<button class="btn">make your photobook</button>
+				</div>
+			</div>
+		</main>
+
+
+		<!-- Steps -->
+		<section class="content-steps">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<figure>
+							<img src="img/cloud-download.png" alt="Download Photo">
+							<figcaption>Download <br> Photo</figcaption>
+						</figure>
+					</div>
+
+					<div class="col-md-3  col-sm-6 col-xs-12">
+						<figure class="figure2">
+							<img src="img/desktop.png" alt="Download Photo">
+							<figcaption>Design your <br> photobook</figcaption>
+						</figure>
+					</div>
+
+					<div class="col-md-3  col-sm-6 col-xs-12">
+						<figure>
+							<img src="img/pay.png" alt="Download Photo">
+							<figcaption>Pay For  <br> Service</figcaption>
+						</figure>
+					</div>
+
+					<div class="col-md-3  col-sm-6 col-xs-12">
+						<figure>
+							<img src="img/get.png" alt="Download Photo">
+							<figcaption>Get Your<br> Photobook</figcaption>
+						</figure>
+					</div>
+
+				</div>
+			</div><!-- Container -->
+		</section>
+		<!-- /Steps -->
+
+		<!-- Advantage -->
+		<section class="advantage">
+			<div class="container">
+				<h1>Advantage</h1>
+				<div class="row">
+
+					<div class="col-sm-4 col-xs-12">
+						<div class="item">
+							<div class="img bg-white">
+								<img src="img/1.png" alt="Social Media ">
+							</div>
+							<a href="#">Import photos <br>from your social networks</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt modi tempora</p>
+						</div>
+					</div>
+
+					<div class="col-sm-4 col-xs-12">
+						<div class="item">
+							<div class="img ">
+								<img src="img/2.png" alt="Social Media ">
+							</div>
+							<a href="#">Photo editing </a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt modi tempora</p>
+						</div>
+					</div>
+
+					<div class="col-sm-4 col-xs-12">
+						<div class="item">
+							<div class="img ">
+								<img src="img/3.png" alt="Social Media ">
+							</div>
+							<a href="#">Templates</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt modi tempora</p>
+						</div>
+					</div>
+
+				</div><!-- Row -->
+
+				<button class="btn">Make Your Photobook</button><!-- #e11a27 -->
+			</div><!-- Container -->
+		</section>
+		<!-- /Advantage -->
+
+
+
+
+
+		<!-- Ready solutions -->
+		<section class="read-solution">
+			<div class="container">
+				<h1> Ready solutions </h1>
+				<div class="row">
+
+					<div class=" col-md-4  col-sm-6 col-xs-12">
+						<div class="book">
+							<h3>LightBook</h3>
+							<span><i class="fa fa-check"></i> 15×10 cm </span>
+							<span><i class="fa fa-check"></i> 12 pages </span>
+							<span><i class="fa fa-check"></i> binding on the clip </span>
+							<span class="price"><i class="fa fa-usd"></i> 129 </span>
+							<a href="#">Make Your LightBook</a>
+						</div>
+					</div>
+
+					<div class=" col-md-4  col-sm-6 col-xs-12">
+							<div class="book">
+							<span class="best"> bestseller</span>
+							<h3>ClassicBook</h3>
+							<span><i class="fa fa-check"></i> 30×21 cm </span>
+							<span><i class="fa fa-check"></i> 36 pages </span>
+							<span><i class="fa fa-check"></i> binding on the spring </span>
+							<span><i class="fa fa-check"></i> bfabric cover </span>
+							<span class="price"><i class="fa fa-usd"></i> 239 </span>
+							<a href="#">Make Your ClassicBook</a>
+						</div>
+					</div>
+
+					<div class=" col-md-4  col-xs-12">
+						<div class="book">
+							<h3>PremicumBook</h3>
+							<span><i class="fa fa-check"></i> 42×50 cm </span>
+							<span><i class="fa fa-check"></i> 50 pages </span>
+							<span><i class="fa fa-check"></i> bhard cover </span>
+							<span><i class="fa fa-check"></i> letter cover </span>
+							<span><i class="fa fa-check"></i> free shipping</span>
+							<span class="price"><i class="fa fa-usd"></i> 759 </span>
+							<a href="#">Make Your PremicumBook</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- /Ready solutions -->
+
+
+		<!-- Testimonials -->
+		<section class="testimonials">
+			<div class="container">
+				<div class="col-md-6 col-xs-12">
+					<h1>Testimonials</h1>
+					<div class="person">
+						<img src="img/person.png" alt="Testimonials person">
+						<p> <a href="#"> John Doe </a><br> Wedding photographer</p>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					<a href="#"> Next testimonial &#8594;	 </a>
+					<button class="btn"><a href="#" >Make Your PhotoBook</a></button>
+				</div>
+			</div>
+		</section>
+		<!-- /Testimonials -->
+
+		<!-- Terms Payment Shipping -->
+		<section class="boxs">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="terms item">
+							<h3>Terms</h3>
+							<p> 
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+							</p>
+							<p>
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="payment item">
+							<h3>Payment</h3>
+							<span>Payment methods:</span>
+							<ul>
+								<li> <a href="#">VISA</a> </li>
+								<li> <a href="#">MasterCard</a>  </li>
+								<li> <a href="#">PayPal</a> </li>
+								<li> <a href="#">American Express </a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-4  col-xs-12">
+						<div class="shipping item">
+							<h3>Shipping</h3>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+							<span>Free shipping for<br> PremiumBook</span>
+						</div>
+					</div>
+
+				</div>
+				<button class="btn"><a href="#" >Make Your PhotoBook</a></button>
+			</div>
+		</section>
+		<!-- /Terms Payment Shipping -->
+
+		<footer>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="links">
+							<a href="#">About Us</a>
+							<a href="#">Careers</a>
+							<a href="#">Help</a>
+							<a href="#">Press</a>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="links">
+							<a href="#">terms</a>
+							<a href="#">Payment</a>
+							<a href="#">Shipping</a>
+							<a href="#">Contact</a>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="links">
+							<a href="#">LightBook</a>
+							<a href="#">ClassicBook</a>
+							<a href="#">PremiumBook</a>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="links">
+							<div class="font-awesome">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+							</div>
+							<a class="designer-logo" href="#">
+					 			<img alt="Brand" src="img/designer-logo.png">
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="copyright">
+					© 2015 <a href="#">Photobook</a>. All rights reserved
+				</div>
+			</div><!-- container -->
+		</footer>
+	</body>
+</html>

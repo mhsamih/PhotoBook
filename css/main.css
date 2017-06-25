@@ -1,0 +1,907 @@
+/* my Frame work */
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #212121;
+	transition: 0.3s
+}
+a:hover{
+	color: #e11a27
+}
+.float-right{
+	float: right;
+}
+.float-left{
+	float: left;
+}
+html , body{
+	overflow-x:hidden;
+}
+
+
+/* ================================ */
+/* ================================ */
+
+
+/* Button Style */
+.btn{
+	border: 1px solid rgba(33, 33, 33, 0.4);
+	background: none;
+	padding: 16px 32px;
+	font-size: 26px;
+	font-weight: 100;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	transition:0.25s ;	
+	font-family: 'Poiret One', cursive;
+}
+.btn::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 0%;
+	bottom: 0px;
+	z-index: -1;
+	left: 0;
+	background-color: rgba(33, 33, 33, 0.3);
+	transition:0.25s ;	
+	
+}
+.btn:hover{
+	color: #FFF
+}
+.btn:hover:after{
+	height: 100%;	
+}
+.btn:focus{
+	outline: none;
+}
+
+
+/* ================================ */
+/* ================================ */
+
+
+/* [ Components Of Css ]
+	
+	== Side NAv
+	== Main [ NavBar & Main-Banner ]
+	== Steps 
+	== Advantage
+	== Ready solution
+	== Testimonials
+	== Terms Payment Shipping
+	== Footer 
+	== Fixing Problems of Media 
+
+*/
+
+
+
+
+
+
+/* =============================================================== */
+/* =============================================================== */
+/*
+  - ---------------------------- - 
+  -                              -
+  -                              -
+  -      Start my Style          -
+  -   Coding by : MH SAMIH       -
+  -                              -
+  - ---------------------------- -
+*/
+
+
+/* Start My Style */
+/* Nav [ SideNav ]*/
+.sidenav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	height: 100%;
+  width: 0px; /* Width : 255px*/
+	overflow: hidden;
+	background-color: #ffd200;
+	transition: 0.5s;
+}
+
+.sidenav span{
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+.sidenav .navbar-brand{
+	display: block;
+	background-color: #212121;
+	padding: 20px 0;
+	list-style: none;
+	text-align: center;
+	border-bottom: 1px dashed #fff;
+}
+.sidenav ul{
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(35, 31, 32, 0.49);
+}
+.sidenav ul li a{
+  color: #212121;
+  display:block;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 10px 0 10px 10px;
+  transition: all 0.3s ease-in;
+ 	 font-family: 'Josefin Sans', sans-serif;
+	
+}
+.sidenav ul li:hover a{
+	color: #fff;
+	padding-left: 16px;
+	background-color: #212121;
+}
+ .font-awesome {text-align:center; padding-top:22px}
+.font-awesome i{
+  font-size: 28px;
+  padding: 2px;
+  width: 45px;
+  color: #231f20;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+  transform-origin: center center;
+  height: 45px;
+  background-color: transparent;
+  line-height: 45px;
+}
+ .font-awesome i:hover{
+	color: rgba(255, 255, 255, 0.8);
+	transform: scale(1.1);
+	background-color:#231f20;
+  border-radius: 50%;
+}
+.sidenav .designer-logo{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 26px;
+	transition: all 0.3s ease-in;
+	transform-origin: center center; 
+}
+.sidenav .designer-logo:hover{transform: scale(1.1);}
+.sidenav .mask{
+
+}
+
+/* Toggle Classs */
+.width{width:255px;} /* For side Nav */
+.margin-left{margin-left: 255px} /* For Main */
+.opacity{width: 100%} /* For Mask */
+
+
+
+/* ================================ */
+/* ================================ */
+
+
+/* Main */
+main{
+  transition: .5s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+main .navbar{
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+main .navbar .sidenav-icon{
+	width: 32px;
+	float: left;
+	position: relative;
+	z-index: 4;
+	margin-right: 35px;
+	cursor: pointer;
+	display:inline-block;
+}
+main .navbar .sidenav-icon span{
+	width: 30px;
+	height: 1.9px;
+	display: block;
+	background-color: #212121;
+	margin: 0  0 6px 0;
+	border-radius:30px;
+	transition: 0.4s;
+}
+/* First Span */
+.change .bar1{
+	-webkit-transform: rotate(-45deg) translate(-8px, 8px) ;
+    transform: rotate(-45deg) translate(-6px, 7px) ;
+}
+/* Second Span */
+.change .bar2{
+	opacity: 0;
+}
+
+/* Third Span */
+.change .bar3{
+  -webkit-transform: rotate(45deg) translate(-4px, -6px) ;
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+main .navbar .navbar-brand{
+	display: inline-block;
+}
+main .navbar .navbar-brand img{
+	max-width: 100%;
+}
+main .navbar .phone span{
+	padding: 10px 20px;
+	border-radius: 8px;
+	color: #212121;
+	margin-right: 10px;
+	display: inline-block;
+	background-color: #ffd200;
+	 font-family: 'Josefin Sans', sans-serif;
+}
+main .navbar .phone .fa-phone{
+	color: #FFF;
+	font-size: 18px; 
+	margin-right: 10px;
+}
+main .navbar .phone .fa-long-arrow-right{
+	padding: 6px;
+	width: 25px;
+	cursor: pointer;
+	margin-left: 8px;
+	border: 1px solid #212121;
+	border-left: none;
+}
+main .navbar .phone .fa-long-arrow-right:before{
+	margin-left: 3px;
+	display: inline-block;
+	transform: translateX(-15px);
+}
+
+main .main-banner{
+	background-image: url(../img/main-banner.png);
+	background-size: cover;
+	background-position: center center;
+	min-height: 450px;
+	padding-top: 40px;
+	text-align: center;
+	padding-bottom: 244px;
+	color: #212121;
+}
+main .main-banner h1{
+  font-size: 60px;
+  font-weight: 100;
+	font-family: 'Poiret One', cursive;
+}
+main .main-banner span{
+	margin: 5px 0 20px 0;
+	display: inline-block;
+}
+main .main-banner button{margin-top: 27px;}
+main .main-banner button::after{
+	background-color: rgba(33, 33, 33, 0.3);
+}
+
+
+/* ================================ */
+/* ================================ */
+
+
+/* Steps Conent */
+.content-steps{
+	padding: 40px 0;
+	color: #212121;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.content-steps figure {
+	position: relative;
+	margin-bottom: 25px
+}
+.content-steps figure:after{
+  content: '';
+  position: absolute;
+  top: 70px;
+  width: 154px;
+  border-bottom: 3px dashed #ffd200;
+  right: -91px;
+}
+.content-steps .row div:nth-child(4) figure:after{
+	width:0;
+}
+.content-steps figure figcaption{
+	margin-top: 12px;
+	font-size: 20px;
+}
+
+
+/* ================================ */
+/* ================================ */
+
+/* Advantage */
+.advantage{
+	padding: 40px 0;
+	background-color: #f3f0e7;
+	text-align: center;
+	color: #000
+}
+.advantage h1{
+  font-size: 60px;
+  font-weight: 100;
+  padding: 12px 0;
+  font-family: 'Poiret One', cursive;
+}
+.advantage .item{
+	padding: 30px 0;
+	margin-bottom: 10px
+}
+
+.advantage .item img{
+	max-width: 100%;
+}
+.advantage .item a{
+	color: #000;
+	font-size: 24px;
+	margin:20px 0  0  0;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+.advantage .item  p{
+	margin-top: 15px;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+.advantage .btn{
+	color: #fff;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	border:none; 
+	background-color:#e11a27;
+}
+.advantage .btn:after{
+	background-color: #c10b17;
+
+}
+
+/* ================================ */
+/* ================================ */
+
+/* Read-Solution */
+
+.read-solution{
+	padding: 50px 0;
+	text-align: center;
+}
+.read-solution h1{
+  margin-bottom: 90px;
+  font-size: 60px;
+  font-weight: 100;
+  padding: 12px 0;
+  font-family: 'Poiret One', cursive;
+}
+
+.read-solution .book{
+	min-height: 456px;
+	position: relative;
+	max-width: 456px;
+	margin: auto;
+	border-radius: 6px;
+	margin-bottom: 70px;
+	transition: 0.3s;
+	z-index: 2;
+	border:5px solid #ffd200;
+}
+.read-solution .book:hover{
+	border-color:#212121;
+  transform: translateY(-15px);
+	box-shadow:0 12px 28px 7px rgba(0,0,0,.24);
+}
+.read-solution .book .best{
+  color: red;
+  left: 50%;
+  top: -55px;
+  z-index: -1;
+  padding: 0;
+  width: 50%;
+  height: 50px;
+  display: block;
+  font-size: 20px;
+  transition: 0.3s;
+  line-height: 50px;
+	border-radius: 2px;
+  position: absolute;
+  text-align: center;
+  background: #ffd200;
+  transform: translateX(-50%);
+}
+
+.best:before{
+	content:'';
+	position:absolute;
+	width: 0;
+	height: 0;
+	left:-49px;
+	transition: 0.3s;
+	border-style: solid;
+	border-width: 0 0 50px 50px;
+	border-color: transparent transparent #ffd200 transparent;
+}
+
+.best:after{
+	content:'';
+	position:absolute;
+	right:-49px;
+	width: 0;
+	height: 0;
+	transition: 0.3s;
+	border-style: solid;
+	border-width: 50px 0 0 50px;
+	border-color: transparent transparent transparent #ffd200;
+}
+.book:hover .best{background-color: #212121} 
+.book:hover .best:before{	border-color: transparent transparent #212121 transparent;} 
+.book:hover .best:after{border-color: transparent transparent transparent #212121;} 
+
+.read-solution .book h3{
+  color: #000;
+  font-size: 30px;
+  padding: 25px 0;
+  transition: 0.3s;
+  font-weight: 100;
+  margin-bottom: 16px;
+  background-color: #ffd200;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.read-solution .book:hover h3{color: #FFF;background-color: #212121}
+.read-solution .book span{
+	display: block;
+	padding: 8px 0 8px 30px;
+	text-align: left;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+.read-solution .book span .fa-check{
+	margin-right: 9px;
+	font-weight: 100;
+	border: 2.4px solid #ffd200;
+	border-radius: 50%;
+	background-color: rgba(255, 210, 0, 0.19);
+	padding: 1px;
+	border-right: none;
+}
+.read-solution .book span .fa-check:before {
+  content: "\f00c";
+  display: block;
+  transform: translate(3px, -1px);
+  font-size: 20px;
+  color: #231f20;
+}
+.read-solution .book .price{
+	text-align: center;
+	padding: 5px;
+	position: absolute;
+	font-size: 60px;
+	right: 50px;
+	bottom: 54px;
+}
+
+.read-solution .book .price i{
+	margin-right: -9px
+}
+
+
+.read-solution .book a{
+	color: #000;
+	bottom: 0;
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+	transition: .3s;
+	font-size: 24px;
+	position: absolute;
+	font-weight: 100;
+	background-color: #ffd200;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.read-solution .book:hover a{
+	color: #fff;
+	background-color: #212121
+}
+
+
+/* ================================ */
+/* ================================ */
+
+
+/* testimonials */
+.testimonials{
+	padding: 40px 0;
+	background-image: url('../img/banner2.png');
+}
+.testimonials h1{
+	margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 100;
+  padding: 12px 0;
+  font-family: 'Poiret One', cursive;
+}
+.testimonials .person{}
+.testimonials .person::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.testimonials .person img{
+	float: left;
+  margin-right: 20px;
+}
+.testimonials .person  p{
+	float: left;
+	font-size:14px; 
+	margin-top: 55px;
+  padding-left: 11px;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+.testimonials .person p a{
+	font-size:18px; 
+	font-weight: bold;
+	margin-bottom: 7px;
+	display: inline-block;
+}
+.testimonials p{
+	color: #000;
+	margin-top:20px;
+	font-size:18px;
+	margin-bottom: 10px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.testimonials  a{
+	display: block;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: right
+}
+
+.testimonials .btn{
+	margin-top: 25px;
+	text-align: center;
+  width:60%;
+	display: block;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: auto;
+	font-size: 20px;
+	margin-top: 40px
+}
+.testimonials .btn a{
+	text-align: center
+}
+.testimonials .btn:hover a{color: #fff}
+
+
+
+/* ================================ */
+/* ================================ */
+
+
+
+.boxs{
+	padding: 40px 0;
+}
+.boxs .item{
+	z-index: 2;
+	margin: auto;
+	transition: 0.3s;
+	max-width: 456px;
+	min-height: 338px;
+	position: relative;
+	border-radius: 6px;
+	margin-bottom: 70px;
+  background-color: #f3f0e7;
+	border:5px solid #ffd200;
+}
+.boxs .item:hover{
+	border-color: #212121;
+	transform: translateY(-15px);
+	box-shadow:0 12px 28px 7px rgba(0,0,0,.24);
+}
+
+.boxs .item h3{
+  color: #000;
+  font-size: 30px;
+  padding: 25px 0;
+  transition: 0.3s;
+  font-weight: 100;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #ffd200;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.boxs .item:hover h3{color: #FFF;background-color: #212121}
+
+/* terms */
+.boxs .terms h3{
+	margin-bottom: 22px;
+}
+.boxs .terms p{
+	color: #000;
+	margin-top:7px;
+	font-size:20px;
+	padding: 2px 32px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+/* Payment */
+.boxs .payment {
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+.boxs .payment span{
+	padding: 5px 32px;
+}
+.boxs .payment ul{
+	padding: 4px 50px;
+}
+.boxs .payment ul li{
+	padding: 5px 0;
+	margin:7px 0;
+}
+
+/* Shipping */
+
+
+.boxs .shipping p{
+	color: #000;
+	margin-top:7px;
+	font-size:20px;
+	padding: 2px 32px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.boxs .shipping span{
+	color: #e11a27;
+	font-size: 20px;
+	margin-top: 17px;
+	padding: 5px 32px;
+	display: inline-block;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.boxs .btn{
+	margin: 0 auto 20px auto;
+  display: block;
+	border-radius: 4px;
+	border: none;
+	background-color: #e11a27;
+}
+.boxs .btn:hover a, .boxs .btn a{color:#fff}
+
+
+/* ================================ */
+/* ================================ */
+
+
+
+footer{
+	padding: 40px 0;
+	font-family: 'Josefin Sans', sans-serif;
+  background-color: #ffd200;
+}
+footer .links{
+	padding: 3px 0;
+	margin-bottom: 25px;
+	position: relative
+}
+footer .links:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	border: 1px solid  rgba(33, 33, 33, 0.45);
+	width: 120px;
+	height: 0;
+}
+footer .links a{
+	display: block;
+	padding: 6px 0;
+}
+
+footer .links .font-awesome{
+	text-align: left;
+	padding: 0;
+}
+footer .links .font-awesome  a{
+ 	display: inline;
+ 	padding: 0;
+}
+footer .links .font-awesome i{
+ 	text-align: center;
+}
+footer .links  .designer-logo{
+  margin: 20px 27px;
+  transform-origin: center center; 
+}
+
+footer .copyright{
+	text-align: center;
+	padding: 15px 0;
+}
+
+/* ================================ */
+/* ================================ */
+
+
+
+/* This Media  To Fix After Content */
+/*Large devices (less than 1200px)*/    /* LG */
+@media (max-width: 1200px) { 
+	.content-steps figure:after{
+			width: 113px;
+			right: -71px;
+		}
+
+}
+
+
+
+
+
+
+/* Medium devices ( less than 992px)*/     /* MD */
+@media (max-width: 992px) { 
+	.content-steps .figure2:after{
+			display:none
+		}
+	.content-steps figure:after{
+		width: 241px;
+		right: -135px;
+	}
+ }
+
+
+
+
+
+
+/*small devices (less than 576px)*/      /* SM */
+@media (max-width: 767px) { 
+	.content-steps figure{margin-bottom:40px}
+	.content-steps figure:after{
+		display:none
+	}
+
+	.advantage .item p{
+		max-width:400px;
+		margin:10px auto
+	}
+}
+
+
+
+
+
+/*Extra small devices (less than 576px)*/      /* XS */
+@media (max-width: 575px) { 
+	main .navbar .float-left{
+		width:229px;
+		float:none;
+		margin: 4px auto 21px auto;
+	}
+	main .navbar .phone{
+		float:none;
+		width: 215px;
+		margin:auto;
+	}
+
+	main .main-banner h1{
+		font-size:35px;
+		margin-bottom:10px
+	}
+	main .main-banner .btn{
+		padding: 14px 16px;
+		font-size: 19px;
+		font-weight: 800;
+	}
+
+	.advantage .btn{
+		padding:15px;
+		font-size:20px;
+	}
+
+
+	.testimonials .btn{
+		padding: 10px;
+		font-size: 15px;
+	}
+
+
+	.boxs .btn{
+		font-size:20px
+	}
+	
+ }
+
+
+
+
+ /*Extra small devices(less than 300px)*/     /* XXS */
+@media (max-width: 300px){
+	main .navbar .sidenav-icon{
+		margin-right:5px
+	}
+	main .navbar img{
+		width:80%
+	}
+	main .navbar .float-left{
+		width:200px;
+		float:none;
+		margin: 4px auto 21px auto;
+	}
+	main .navbar .phone{
+		float:none;
+		width: 200px;
+		margin:auto;
+		padding: 10px 5px;
+	}
+	main .navbar .phone span{
+		margin-right:0;
+		padding:8px;
+	}
+	main .main-banner h1{
+		font-size:25px;
+		margin-bottom:10px
+	}
+	main .main-banner span{
+		font-size:15px;
+		font-weight:bold
+	}
+	main .main-banner .btn{
+		padding: 14px 15px;
+		font-size: 16px;
+		font-weight: 800;
+	}
+
+
+	.advantage .btn{
+		padding:15px;
+		font-size:16px;
+	}
+
+	
+	.read-solution .book{overflow:hidden}
+	.read-solution .book h3{font-size:25px;}
+	.read-solution .book .price {
+		padding: 5px;
+		position: absolute;
+		font-size: 45px;
+		right: 50px;
+		bottom: 45px;
+	}
+
+	.read-solution .book a{
+		font-size:16px
+	}
+
+
+	.testimonials .btn{
+		width:95%
+	}
+
+	.boxs .btn{
+		font-size:15px;
+		padding:10px 15px;
+	}
+}
